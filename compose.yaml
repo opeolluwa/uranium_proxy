@@ -1,0 +1,11 @@
+
+services:
+  server:
+    build:
+      context: .
+      target: final
+    ports:
+      - 4576:4576
+    environment:
+      - HTTP_SERVICE_PORT=4576
+      - GRPC_BASE_URL=http://127.0.0.1:50051
